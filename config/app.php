@@ -125,6 +125,12 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+
+    'maintenance' => [
+    'driver' => 'file',
+        // 'store'  => 'redis',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
