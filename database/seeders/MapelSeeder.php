@@ -4,11 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use Faker\Factory as Faker;
+use Illuminate\Support\Facades\DB;
 
-
-class TeacherSeeder extends Seeder
+class MapelSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,14 +16,11 @@ class TeacherSeeder extends Seeder
      */
     public function run()
     {
-        //
         $faker = Faker::create('id_ID');
-        for($i = 1; $i <= 10; $i++){
-
-            DB::table('teachers')->insert([
-                'name' => $faker->name,
-                'age' => $faker->randomNumber(20,80),
-                'mapel' => $faker->word()
+        for ($i = 1; $i <= 20; $i++){
+            DB::table('mapel')->insert([
+                'mapel' => $faker->word(),
+                'pengampu' =>$faker->randomNumber(1,30)
             ]);
         }
     }
