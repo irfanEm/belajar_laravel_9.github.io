@@ -23,7 +23,7 @@ class TeacherSeeder extends Seeder
 
             DB::table('teachers')->insert([
                 'name' => $faker->name,
-                'age' => $faker->randomNumber(20,80),
+                'age' => $faker->randomNumber(1,80),
                 'mapel' => $faker->word()
             ]);
         }

@@ -7,19 +7,19 @@
     <title>Filter</title>
 </head>
 <body>
-    <h2>Data Siswa</h2>
+    <h2>Data Guru Filter</h2>
     <table border="1">
         <thead>
             <th>#</th>
             <th>Nama</th>
-            <th>Nilai</th>
+            <th>Umur</th>
         </thead>
         <tbody>
-        @foreach($murid2 as $murid)
+        @foreach($gurus as $guru)
             <tr>
-                <td>{{ $murid->id }}</td>
-                <td>{{ $murid->name }}</td>
-                <td>{{ $murid->score }}</td>
+                <td>{{ $guru->id }}</td>
+                <td>{{ $guru->name }}</td>
+                <td>{{ $guru->age }}</td>
             </tr>
         @endforeach
         </tbody>
